@@ -539,7 +539,7 @@ state_agency_data['State'] = state_agency_data['Agency'].str.replace("State of "
 state_action_counts = state_agency_data.groupby('State').size().reset_index(name='action_count')
 
 # Read in the shapefile for U.S. state boundaries
-shapefile_path = '/path/to/cb_2018_us_state_500k/cb_2018_us_state_500k.shp'
+shapefile_path = 'C:/Users/Shreya Work/OneDrive/Documents/GitHub/PS5/cb_2018_us_state_500k.shp'
 states_map = gpd.read_file(shapefile_path).to_crs(epsg=4326)
 
 # Merge the state-level enforcement action data with the states shapefile
@@ -589,7 +589,7 @@ district_data['District'] = district_data['Agency'].str.split(',').str[1].str.st
 district_action_counts = district_data.groupby('District').size().reset_index(name='action_count')
 
 # Load the US Attorney District shapefile
-district_shapefile_path = '/path/to/US Attorney Districts Shapefile simplified_20241108/geo_export_6122d5c7-042c-4e6e-9edd-c15058235201.shp'
+district_shapefile_path = 'C:/Users/Shreya Work/OneDrive/Documents/GitHub/PS5/geo_export_6122d5c7-042c-4e6e-9edd-c15058235201.shp'
 district_map = gpd.read_file(district_shapefile_path)
 
 # Merge the enforcement data with the district shapefile based on judicial district names
